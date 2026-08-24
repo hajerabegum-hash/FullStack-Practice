@@ -1,0 +1,108 @@
+* {
+    margin: 5px;
+    padding: 5px;
+}
+h1{
+    text-align: center;
+    color:blue;
+    opacity: 0.2;
+    transition: opacity
+ 1s ease-out 2s;
+}
+#box1 {
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+    margin: 20px;
+ transition: width 2s ease-in-out 0s,background-color 2s ease-in-out 0s; 
+}
+#box1:hover {
+    background-color:purple; width: 700px;
+    border-radius: 50px;
+}
+#box2{
+    height: 200px;
+    width: 200px;
+background-color: olive;
+transform: skew(-10deg);
+transition: transform 3s ease-in 0s;
+margin: 10px auto;
+border-top-left-radius: 1 sec ease-in 0s;
+text-transform: lowercase;
+}
+#box2:hover {
+    border-top-left-radius: 20px 50px;
+    margin-left: 500px;
+    transform:rotate(30deg);
+    background-color: pink;
+    text-transform: capitalize;
+}
+#box3 {
+    background-color: navajowhite;
+    height: 100px;
+    width: 100px;
+    box-shadow: 10px 10px 20px green;
+}
+#box3:hover{
+    background-color: blanchedalmond;
+    transform: scale(2) rotate(-45deg) translate(100px, 100px);
+}
+#container{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    margin-left: 1000px;
+}
+#box4{
+    height: 100px;
+    width: 500px;
+    background-color: chocolate;
+}
+#box4:hover{
+    background-color: cornflowerblue;
+}
+/* #box5{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 150px;
+    z-index: -2;
+} */
+#navbar{
+    background-color: violet;
+    height: 10px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+    p{
+       background-color: rgb(219, 250, 250);
+        margin-top: 80px;
+        text-align: justify;
+    }
+    p:hover{ 
+        background-color: aliceblue;
+    }
+
+#tri{
+    background-color: rgb(241, 208, 208);
+    height: 200px;
+    width: 200px;
+    clip-path: polygon(50% 0%,100% 100%, 0% 100%);
+    text-transform: lowercase;
+    }
+#tri:hover{
+    background-color: cadetblue;
+}
+#boxx{
+    height: 200px;
+    width: 200px;
+background-color:navajowhite;
+clip-path: polygon(20% 20%,50% 50%, 20% 50%);
+}
+#boxx:hover{
+    background-color: blueviolet
+}

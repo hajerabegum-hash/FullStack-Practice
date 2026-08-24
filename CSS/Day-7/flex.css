@@ -1,0 +1,21 @@
+h1 {
+  color: rgba(112, 4, 22, 0.973);
+  background-color: rgba(136, 46, 46, 0.151);
+  box-shadow: 10px 10px 15px rgba(141, 25, 25, 0.548);
+  border-top-right-radius: 100px;
+  border: 2px solid black;
+  margin: 20px;
+}
+#container {
+  height: 1000px;
+  width: 100vw;
+  background-color: rgba(14, 241, 241, 0.486);
+  border: 1px solid rgb(12, 14, 14);
+}
+div {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

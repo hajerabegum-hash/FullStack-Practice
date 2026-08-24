@@ -1,0 +1,97 @@
+/* 1. Global Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+}
+
+/* 2. Navbar Layout Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 15px; /* Spaces the navigation items out evenly */
+}
+
+/* 3. Base Navbar Link Rules (Shared by all links) */
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+
+/* --- EFFECT 1: Background & Color Fill --- */
+.nav-link.style-color {
+  /* Transition goes on base element so it plays smoothly both ways */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.style-color:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+
+/* --- EFFECT 2: Sliding Underline --- */
+.nav-link.style-underline {
+  position: relative; /* Allows the absolute pseudo-element to anchor below it */
+  border-radius: 0; /* Box corners removed for underline aesthetic */
+  padding: 8px 0;   /* Side padding removed to align line perfectly with text */
+  margin: 0 16px;   /* Margin compensates for the missing padding */
+  transition: color 0.3s ease;
+}
+
+.nav-link.style-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Hidden initially */
+  height: 2px;
+  background-color: #28a745;
+  transition: width 0.3s ease-in-out; /* Smooth slide out width */
+}
+
+.nav-link.style-underline:hover {
+  color: #28a745;
+}
+
+.nav-link.style-underline:hover::after {
+  width: 100%; /* Grows to full width on hover */
+}
+
+
+/* --- EFFECT 3: Floating / Scaling Up --- */
+.nav-link.style-lift {
+  /* Using cubic-bezier gives it a bouncy, dynamic feel */
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.25s ease;
+}
+
+.nav-link.style-lift:hover {
+  color: #dc3545;
+  transform: translateY(-4px) scale(1.08); /* Pulls text up and increases size slightly */
+}

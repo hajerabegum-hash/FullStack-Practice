@@ -1,0 +1,16 @@
+ul>li {
+    display: inline-block;
+    color: blue;
+    padding: 10px;
+}
+h1{
+    color: rgb(155, 57, 155);
+    background-color: rgb(255, 94, 0, 0.5);
+    padding: 55px;
+}
+div{
+    background-color: aqua;
+}
+body{
+    background-color: beige;
+}

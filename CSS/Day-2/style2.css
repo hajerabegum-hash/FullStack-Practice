@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+.first{
+    text-transform:capitalize;
+    background-color: aqua;
+}
+.second{
+    letter-spacing: 3px;
+}
+.third{
+    line-height: 2;
+}
+.fourth{
+    font-family: "raleway","helvetica","sans-serif";
+}
+ h5{
+    font-weight:900;
+    font-size: 48px;
+}
+a{
+    color: red;
+    text-decoration: none;
+}
+.seventh{
+    text-align: center;
+    text-transform: capitalize;
+}
+.eight{
+    text-decoration:red line-through
+}
+.nineth{
+    font-family: monospace;
+    font-size: 14px;
+}
+.ten{
+    font-weight: 300;
+    color: #888;
+    line-height: 1.7;
+}
+
+.flex-container{
+    text-align: center;
+}

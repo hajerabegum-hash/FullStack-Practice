@@ -1,0 +1,8 @@
+ul:nth-of-type(odd){
+background-color: white;
+color: black;
+}
+ul:nth-of-type(even){
+    background-color: black;
+    color: white;
+}
