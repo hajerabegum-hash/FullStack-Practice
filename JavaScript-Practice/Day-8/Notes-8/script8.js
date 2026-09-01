@@ -58,3 +58,15 @@
 //output:Sarah deposited $500. New balance: $5500
 
 //Example 3: Shopping Cart
+
+ //const cart= { 
+//items: ["Apple", "Banana"],
+//total:2, 
+//addItem(item) { 
+//this.items.push(item);
+//this.total = this.items.length;
+//console.log(Added${ ${item}. Total items: ${this.total}`);
+//}
+//};
+// output: Added Orange. Total items: 3
+
