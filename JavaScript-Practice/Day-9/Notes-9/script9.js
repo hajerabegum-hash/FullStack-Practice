@@ -169,3 +169,4 @@ area. Others are turned away.*/
 // let passing = grades.filter((grade) => grade >= 50);
 // console.log(passing);
 // // output:[78, 89, 92, 56]
+
