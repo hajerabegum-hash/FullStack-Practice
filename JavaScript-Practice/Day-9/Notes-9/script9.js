@@ -543,28 +543,164 @@ Syntax*/
 // Create an array of words. Check if any word contains the letter 'z'.
 
 // Create an array of words
-const words = ["apple", "banana", "grape", "zebra", "mango"];
+// const words = ["apple", "banana", "grape", "zebra", "mango"];
 
-// Function to check if any word contains the letter 'z'
-function containsZ(wordArray) {
-  if (!Array.isArray(wordArray)) {
-    throw new Error("Input must be an array of strings.");
-  }
+// let newWord = words.some((word) => {
+//   if (word.includes("z")) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// });
+// console.log(newWord);
+//output: ture (because in the array words contain letter "z")
 
-  // Use Array.prototype.some() for efficiency
-  return wordArray.some((word) => {
-    if (typeof word !== "string") return false; // Ignore non-string entries
-    return word.toLowerCase().includes("z"); // Case-insensitive check
-  });
-}
+//Problem 8 (Combining methods)
 
-// Check and display result
-try {
-  if (containsZ(words)) {
-    console.log("At least one word contains the letter 'z'.");
+// Create an array of numbers. First filter out odd numbers, then use map to square the remaining even numbers.
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let oddNum = numbers.filter((elem) => elem % 2 == 1);
+// console.log(oddNum);
+// //output: [1, 3, 5, 7, 9]
+// let evenNum = numbers.filter((elem) => elem % 2 == 0);
+// console.log(evenNum);
+// //output: [2, 4, 6, 8, 10]
+// let mappedNum = evenNum.map((elem1) => elem1 * elem1);
+// console.log(mappedNum);
+//output:[4, 16, 36, 64, 100]
+
+/*1. The reduce Method
+
+What is it?
+
+reduce executes a reducer function on each element of the array, resulting in a single output value. It "reduces"
+
+an array of values into one value.
+
+Real-World Analogy
+
+🐷 Piggy Bank: You have coins (array elements) scattered on a table. You pick them up one by one and add
+
+them to your piggy bank (accumulator). At the end, you have one total amount saved.
+
+Syntax*/
+
+// let amount = coins.reduce((accumulator, element) => {
+//   //RETURN UPDATED ACCUMULATOR
+// }, initialValue);
+
+// Examples
+// Example 1: Sum of all numbers
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let sum = numbers.reduce((acc, elem) => {
+//   return acc + elem;
+// }, 0);
+// console.log(sum);
+// //output:55
+
+// example_2
+// let numbers1 = [1, 2, 3, 4, 5];
+// let sum1 = numbers1.reduce((total, num) => {
+//   return total + num;
+// }, 0);
+// console.log(sum1);
+//output: 15
+// Step-by-step execution:
+// total = 0, num = 1 → return 0 + 1 = 1
+// total = 1, num = 2 → return 1 + 2 = 3
+// total = 3, num = 3 → return 3 + 3 = 6
+// total = 6, num = 4 → return 6 + 4 = 10
+// total = 10, num = 5 → return 10 + 5 = 15
+
+// Example 2: Product of all numbers
+
+// let numbers = [1, 3, 4, 5];
+// let productOfNum = numbers.reduce((acc, elem) => {
+//   return acc * elem;
+// });
+// console.log(productOfNum);
+//output: 60
+//example-2
+
+//  let numbers = [2, 3, 4, 5];
+// let product = numbers.reduce((result, num) => result * num, 1);
+// console.log(product);
+// output: 120 (2 * 3 * 4 * 5)
+
+// Example 3: Calculate total price
+
+// let cart = [
+//   {
+//     item: "Shirt",
+//     size: "XL",
+//     price: 700,
+//   },
+//   {
+//     item: "Shirt",
+//     size: "XL",
+//     price: 500,
+//   },
+//   {
+//     item: "Shirt",
+//     size: "XL",
+//     price: 600,
+//   },
+// ];
+// let total = cart.reduce((acc, cart) => acc + cart.price, 0);
+// console.log(total);
+//output: 1800
+
+// let cart = [
+//   { item: "Shirt", price: 500 },
+//   { item: "Shoes", price: 1200 },
+//   { item: "Hat", price: 300 },
+// ];
+// let total = cart.reduce((sum, product) => sum + product.price, 0);
+// console.log(total);
+// output: 2000
+
+//Example 4: Count occurrences
+
+let fruits = [
+  "Apple",
+  "Cherry",
+  "Orange",
+  "Banana",
+  "Apple",
+  "Cherry",
+  "Orange",
+  "Banana",
+];
+
+// {
+// Apple: 2,
+// Cherry: 2,
+// Orange: 2,
+// Bananna: 2
+// }
+
+// counter = {apple: 1, cherry: 1, orange: 1, banana: 1}
+// fruit = Apple
+
+let countFruits = fruits.reduce((counter, fruit) => {
+  if (fruit in counter) {
+    counter[fruit] = 1;
   } else {
-    console.log("No word contains the letter 'z'.");
+    console.log("this line ran");
+    console.log(counter[fruit]);
+    counter[fruit] = counter[fruit] + 1;
   }
-} catch (error) {
-  console.error("Error:", error.message);
-}
+
+  return counter;
+}, {});
+
+console.log(countFruits);
+
+// let obj = {
+//   age: 22
+// }
+
+// userKey = age
+
+// obj[userKey]
