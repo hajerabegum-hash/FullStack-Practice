@@ -662,16 +662,16 @@ Syntax*/
 
 //Example 4: Count occurrences
 
-let fruits = [
-  "Apple",
-  "Cherry",
-  "Orange",
-  "Banana",
-  "Apple",
-  "Cherry",
-  "Orange",
-  "Banana",
-];
+// let fruits = [
+//   "Apple",
+//   "Cherry",
+//   "Orange",
+//   "Banana",
+//   "Apple",
+//   "Cherry",
+//   "Orange",
+//   "Banana",
+// ];
 
 // {
 // Apple: 2,
@@ -681,26 +681,174 @@ let fruits = [
 // }
 
 // counter = {apple: 1, cherry: 1, orange: 1, banana: 1}
-// fruit = Apple
+// // fruit = Apple
 
-let countFruits = fruits.reduce((counter, fruit) => {
-  if (fruit in counter) {
-    counter[fruit] = 1;
-  } else {
-    console.log("this line ran");
-    console.log(counter[fruit]);
-    counter[fruit] = counter[fruit] + 1;
-  }
+// let countFruits = fruits.reduce((counter, fruit) => {
+//   if (fruit in counter) {
+//     counter[fruit] = 1;
+//   } else {
+//     console.log("this line ran");
+//     console.log(counter[fruit]);
+//     counter[fruit] = counter[fruit] + 1;
+//   }
 
-  return counter;
-}, {});
+//   return counter;
+// }, {});
 
-console.log(countFruits);
+// console.log(countFruits);
 
-// let obj = {
-//   age: 22
+//Example 5: Flatten nested arrays
+
+// let nested = [
+//   [1, 2],
+//   [3, 4],
+//   [5, 6],
+//   [7, 8],
+// ];
+// let flat = nested.reduce((acc, arr) => acc.concat(arr), []);
+// console.log(flat);
+//output: [1, 2, 3, 4, 5, 6, 7, 8]
+
+//Example 6: Find longest word
+
+// let words = ["Hello", "Hi", "Bye", "Good Morning", "See You"];
+// let longest = words.reduce((longest, word) => {
+//   return word.length > longest.length ? word : longest;
+// }, "");
+// console.log(longest);
+// //output: Good Morning
+
+// let words = ["hi", "hello", "hey", "goodbye"];
+// let longest = words.reduce((longest, word) => {
+//   return word.length > longest.length ? word : longest;
+// }, "");
+// console.log(longest);
+// output: "goodbye"
+
+//Example 7: Group by category
+
+// let item = [
+//   { name: "Apple", type: "fruit" },
+//   { name: "Carrot", type: "Vegetables" },
+//   { name: "Banana", type: "fruit" },
+//   { name: "Tomato", type: "Vegetables" },
+// ];
+
+// let grouped = item.reduce((result, group) => {
+//   if (!result[group.type]) {
+//     result[group.type] = [];
+//   }
+//   result[group.type].push(group.name);
+//   return result;
+// }, {});
+// console.log(grouped);
+
+// //output: Vegetables
+// :
+// (2) ['Carrot', 'Tomato']
+// fruit
+// :
+// (2) ['Apple', 'Banana']
+
+// let items = [
+//   { name: "Apple", type: "fruit" },
+//   { name: "Carrot", type: "vegetable" },
+//   { name: "Banana", type: "fruit" },
+//   { name: "Potato", type: "vegetable" },
+// ];
+// let grouped = items.reduce((result, item) => {
+//   if (!result[item.type]) {
+//     result[item.type] = [];
+//   }
+//   result[item.type].push(item.name);
+//   return result;
+// }, {});
+// console.log(grouped);
+// { fruit: ["Apple", "Banana"], vegetable: ["Carrot", "Potato"] }
+
+//Example 8: Calculate average
+
+// let scores = [23, 55, 76, 68, 89, 79];
+// let sum = scores.reduce((total, score) => total + score, 0);
+// let average = sum / scores.length;
+// console.log(average);
+//output:65
+
+//Examples
+// Example 1: Find maximum number
+
+// let numbers = [45, 78, 23, 89, 34, 12];
+// let max = numbers.reduce((maximun, number) => {
+//   return number > maximun ? number : maximun;
+// });
+// console.log(max);
+//output: 89
+
+//Example 2: Find maximum with initial value
+
+// let numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+// let maximumNum = numbers.reduce((maximum, number) => {
+//   return number > maximum ? number : maximum;
+// });
+// (console.log(maximumNum), [0]);
+//output: 90
+
+//Example 3: Find minimum number
+
+// let numbers = [32, 23, 45, 11, 1, 46, 76, 7, 0, -7];
+// let minimumNum = numbers.reduce((minimum, number) => {
+//   return number < minimum ? number : minimum;
+// });
+// console.log(minimumNum);
+//output: -7
+
+// let numbers = [45, 78, 23, 89, 34, 12];
+// let min = numbers.reduce((minimum, num) => {
+//   return num < minimum ? num : minimum;
+// });
+// console.log(min);
+// output:12
+
+//Example 4: Find highest price
+
+// let products = [
+//   { name: "Laptop", price: 50000 },
+//   { name: "Mouse", price: 500 },
+//   { name: "Monitor", price: 15000 },
+// ];
+// let maxPrice = products.reduce((max, product) => {
+//   return product.price > max ? product.price : max;
+// }, 0);
+// console.log(maxPrice);
+//output: 50000
+
+//Example 5: Find student with highest marks
+
+// let students = [
+// { name: "Rahul", marks: 85 },
+// { name: "Priya", marks: 92 },
+// { name: "Arjun", marks: 78 }
+// ];
+// let topper = students.reduce((highest, student) => {
+// return student.marks > highest.marks ? student : highest;
+// });
+// console.log(topper);
+//output: { name: "Priya", marks: 92 }
+
+//3. Default Parameters
+
+// What is it?
+
+// Default parameters allow you to set fallback values for function parameters. If no argument is provided (or
+// undefined is passed), the default value is used.
+
+//Syntax
+
+// function functionName(param1 = defaultValue1, param2 = defaultValue2) {
+// function body
 // }
 
-// userKey = age
+// Examples
+// Example 1: Simple greeting
 
-// obj[userKey]
+// function greet(name = " ALice", age = "23") {}
