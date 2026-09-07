@@ -21,18 +21,49 @@
 // Q3. Select the Skills List
 // Select the unordered list with id skillsList and store it in a variable called skills . Log it to verify.
 
-// let skills= document.getElementById("skillsList");
+// let skills = document.getElementById("skillsList");
 // console.log(skills);
 
 //output: <ul id="skillsList">
-        // <li class="skill">HTML</li>
-        // <li class="skill">CSS</li>
-        // <li class="skill">JavaScript</li>
+// <li class="skill">HTML</li>
+// <li class="skill">CSS</li>
+// <li class="skill">JavaScript</li>
 
 //         Q4. Select the Gallery Div
 // Select the div with id gallery and store it in a variable. Log the variable.
 
 //Ans:----
 
+// let idGallery = document.getElementById("gallery");
+// console.log(idGallery);
+
+// //<div id="gallery">
+//       <h2>My Projects</h2>
+//       <img
+//         src="https://via.placeholder.com/200"
+//         class="project"
+//         alt="Project 1"
+//       />
+//       <img
+//         src="https://via.placeholder.com/200"
+//         class="project"
+//         alt="Project 2"
+//       />
+//       <img
+//         src="https://via.placeholder.com/200"
+//         class="project"
+//         alt="Project 3"
+//       />
+//     </div>
+
+//output:
+
 // Q5. Select the Footer
 // Select the footer element with id pageFooter and log it to the console.
+// let footerElm = document.getElementById("pageFooter");
+// console.log(footerElm);
+
+// //output: <footer id="pageFooter">
+//       <p>Contact: <a href="#" class="contact-link">email@example.com</a></p>
+//       <p>Phone: <a href="#" class="contact-link">123-456-7890</a></p>
+//     </footer>

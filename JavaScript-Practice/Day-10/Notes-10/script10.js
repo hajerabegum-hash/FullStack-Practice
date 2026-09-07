@@ -237,4 +237,3 @@
 // let para = document.querySelector("p");
 // console.log(para.innerHTML);
 // You can see all the <a> tags with their href attributes
-
