@@ -1,0 +1,31 @@
+.box2 {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px solid black;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+#btn {
+  display: block;
+  margin: 0px auto;
+}
+
+#para {
+  text-align: center;
+}
+
+div {
+  display: flex;
+  flex-wrap:wrap;
+  gap: 30px;
+  align-items: center;
+}
+body {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
