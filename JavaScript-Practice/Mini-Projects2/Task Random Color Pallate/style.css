@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.box {
+  flex: 1 1 200px; /* Base width of 200px, will grow/shrink and wrap */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.2s ease,
+    background-color 0.3s ease; /* Scale transition */
+}
+.box:hover {
+  transform: scale(1.05); /* Scales up slightly on hover */
+  cursor: pointer;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    background-color 0.2s; /* Scale transition */
+}
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Scales up slightly on hover */
+}
+button:active {
+  transform: scale(0.95); /* Scales down slightly when clicked */
+}

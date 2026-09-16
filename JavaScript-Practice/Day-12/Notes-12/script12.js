@@ -179,3 +179,84 @@ mouseleave - Mouse exits element area (hover ends)*/
 // event.code - The physical key code (e.g., "KeyA", "Space", "ArrowUp")
 
 //Example 1: Display Typed Character
+
+// let input = document.querySelector("input");
+// input.addEventListener("keydown", function (event) {
+//   console.log("Key:", event.key);
+//   console.log("Code:", event.code);
+// });
+
+//Example 2: Arrow Key Navigation (Game Controls)
+
+// let player = document.querySelector("#player");
+// document.addEventListener("keydown", function (event) {
+//   if (event.code === "ArrowUp") {
+//     console.log("Move Up");
+//     player.style.top = parseInt(player.style.top) - 10 + "px";
+//   } else if (event.code === "ArrowDown") {
+//     console.log("Move Down");
+//     player.style.top = parseInt(player.style.top) + 10 + "px";
+//   } else if (event.code === "ArrowLeft") {
+//     console.log("Move Left");
+//     player.style.left = parseInt(player.style.left) - 10 + "px";
+//   } else if (event.code === "ArrowRight") {
+//     console.log("Move Right");
+//     player.style.left = parseInt(player.style.left) + 10 + "px";
+//   }
+// });
+
+// Example 3: Enter Key to Submit
+
+// let searchBox = document.querySelector("#search");
+// searchBox.addEventListener("keydown", function (event) {
+//   if (event.key === "Enter") {
+//     console.log("Searching for:", searchBox.value);
+//     alert("You searched for: " + searchBox.value);
+//   }
+// });
+
+// Example 4: Keyboard Shortcut (Ctrl + S)
+
+// document.addEventListener("keydown", function (event) {
+//   if (event.ctrlKey && event.key === "s") {
+//     event.preventDefault(); // Stop browser from saving page
+//     console.log("Custom save triggered!");
+//     alert("Content saved!");
+//   }
+// });
+
+//Example 5: Character Limit Warning
+
+// let textarea = document.querySelector("#textarea");
+// let counter = document.querySelector("#counter");
+// textarea.addEventListener("keyup", function () {
+//   let length = textarea.value.length;
+//   counter.innerText = length + " / 100 characters";
+//   if (length > 100) {
+//     counter.style.color = "red";
+//   } else {
+//     counter.style.color = "black";
+//   }
+// });
+
+// 6. Form Events & preventDefault()
+
+// // Example 1: Basic Form Submission Prevention
+
+// let form = document.querySelector("form");
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault(); // STOP the page reload!
+//   console.log("Form submitted!");
+// });
+
+//Example 2: Login Form Handler
+
+let loginForm = document.querySelector("#loginForm");
+loginForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  let username = document.querySelector("#username").value;
+  let password = document.querySelector("#password").value;
+  console.log("Username:", username);
+  console.log("Password:", password);
+  alert("Welcome, " + username + "!");
+});

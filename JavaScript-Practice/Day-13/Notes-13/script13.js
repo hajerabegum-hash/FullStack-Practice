@@ -246,22 +246,129 @@
 // Task: Change background color in sequence
 // Red (1s) // Red (1s) →→ Orange (1s) Orange (1s) →→ Gr Green (1s) een (1s) →→ Blue (1s) Blue (1s)
 
-function changeColor(color, delay, callback) {
-  setTimeout(() => {
-    document.body.style.backgroundColor = color;
-    console.log("Changed to:", color);
-    if (callback) callback();
-  }, delay);
-}
+// function changeColor(color, delay, callback) {
+//   setTimeout(() => {
+//     document.body.style.backgroundColor = color;
+//     console.log("Changed to:", color);
+//     if (callback) callback();
+//   }, delay);
+// }
 
 // THE PYRAMID OF DOOM 😱
-changeColor("light pink", 1000, () => {
-  changeColor("orange", 1000, () => {
-    changeColor("lavender", 1000, () => {
-      changeColor("skyblue", 1000, () => {
-        console.log("All colors done!");
-      });
-    });
-  });
-});
-changeColor();
+// changeColor("light pink", 1000, () => {
+//   changeColor("orange", 1000, () => {
+//     changeColor("lavender", 1000, () => {
+//       changeColor("skyblue", 1000, () => {
+//         console.log("All colors done!");
+//       });
+//     });
+//   });
+// });
+// changeColor();
+
+//A More Complex Example: User Registration Flow
+
+// Imagine: Register // Imagine: Register →→ Send Email Send Email →→ Update Database Update Database →→ Send W Send Welcome SMS elcome SMS
+
+// function registerUser(username, callback) {
+//   setTimeout(() => {
+//     console.log("User registered:", username);
+//     callback();
+//   }, 1000);
+// }
+
+// function sendVerificationEmail(callback) {
+//   setTimeout(() => {
+//     console.log("Verification email sent");
+//     callback();
+//   }, 1000);
+// }
+
+// function updateDatabase(callback) {
+//   setTimeout(() => {
+//     console.log("Database updated");
+//     callback();
+//   }, 1000);
+// }
+
+// function sendWelcomeSMS(callback) {
+//   setTimeout(() => {
+//     console.log("Welcome SMS sent");
+//     callback();
+//   }, 1000);
+// }
+
+// // CALLBACK HELL - Nearly impossible to read!
+
+// registerUser("Jhon_Doe", () => {
+//   sendVerificationEmail(() => {
+//     updateDatabase(() => {
+//       sendWelcomeSMS(() => {
+//         console.log("Done with verification");
+//       });
+//     });
+//   });
+// });
+
+// Error handling in callback hell is terrible;
+// getData((err, data) => {
+//   if (err) {
+//     console.error("Error in getData");
+//   } else {
+//     processData(data, (err, result) => {
+//       if (err) {
+//         console.error("Error in processData");
+//       } else {
+//         saveData(result, (err, saved) => {
+//           if (err) {
+//             console.error("Error in saveData");
+//           } else {
+//             console.log("Success!");
+//           }
+//         });
+//       }
+//     });
+//   }
+// });
+
+// 7. Promises: The Solution
+// What is a Promise?
+// A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation. It's a
+// placeholder for a value that will be available in the future.
+// Promise States
+// Every Promise is in one of three states:
+// 1. Pending: Initial state, operation is ongoing
+// 2. Fulfilled (Resolved): Operation completed successfully
+// 3. Rejected: Operation failed
+
+//creating promise
+
+// let myPromise = new Promise((resolve, reject) => {
+//   let success = true;
+//   if (success) {
+//     resolve("Operation successfull");
+//   } else {
+//     reject("Operation Failed");
+//   }
+// });
+// console.log(myPromise);
+
+// Basic Promise Example
+
+// let downloadFile = new Promise((resolve, reject) => {
+//   console.log("Download started...");
+//   setTimeout(() => {
+//     if (internetSpeed === "fast") {
+//       resolve("File downloaded successfully!");
+//     } else {
+//       reject("Download failed: Slow internet");
+//     }
+//   }, 2000);
+// });
+// console.log("Download initiated");
+// console.log(downloadFile); // Promise { <pending> }
+
+
+ //Real Example: Database Operation
+
+ 
