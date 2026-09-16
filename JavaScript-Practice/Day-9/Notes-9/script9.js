@@ -170,6 +170,7 @@ area. Others are turned away.*/
 // console.log(passing);
 // // output:[78, 89, 92, 56]
 
+<<<<<<< HEAD
 //Example 3: Get passing grades
 
 // let grades = [45, 78, 89, 34, 92, 56, 67];
@@ -852,3 +853,5 @@ Syntax*/
 // Example 1: Simple greeting
 
 // function greet(name = " ALice", age = "23") {}
+=======
+>>>>>>> 092fab01da05ae54938b67e322b9a9b0b4d543eb
